@@ -1,7 +1,8 @@
-
+stepsize=0.05;
 lastp = 1;
+random = 0.5;
 
-numRows = int8((lastp)/0.05);
+numRows = int8((lastp)/stepsize);
 ResultMatrix = zeros(numRows , 2); %initialize empty
 
 %init codebook
@@ -13,19 +14,20 @@ end
 codebook = logical(codebook);
 
 for j = 0: numRows % for each p
-    p = double(j)*0.05;
+    p = double(j)*stepsize;
     errorSum = 0;
     numTrials = 50000;
     for k = 1:numTrials % take average over 10 values, arbitrarily for now
         %Generate random message
-        m = rand(1,4) < 0.5;
+        m = rand(1,4) < random;
         %Generator Matrix G = [1 0 0 0 1 1 1 0;0 1 0 0 1 1 0 1; 0 0 1 0 1 0 1 1; 0 0 0 1 0 1 1 1];
         G= [eye(4),rot90(~eye(4))];
-        %Erasure function from channel, p hardcoded to 0.2
+        
+        %Bit Error function from channel, p hardcoded to 0.2
         e = rand(1,8) < p;
         %Codeword created from message and Generator 
         c = mod (m*G,2);
-        %Erase part of the codeword using erasure channel
+        %Corrupt part of the codeword using bit error channel
         y = mod (c+e,2);
 
         chat = [];
