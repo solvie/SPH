@@ -1,9 +1,12 @@
 stepsize=0.02;
-lastp = 1;
+lastp = 0.6;
 random = 0.5;
 
 numRows = int8((lastp)/stepsize);
 ResultMatrix = zeros(numRows , 2); %initialize empty
+
+%Generator Matrix G = [1 0 0 0 1 1 1 0;0 1 0 0 1 1 0 1; 0 0 1 0 1 0 1 1; 0 0 0 1 0 1 1 1];
+G= [eye(4),rot90(~eye(4))];
 
 %init codebook
 codebook = zeros(16,8);
@@ -20,8 +23,7 @@ for j = 0: numRows % for each p
     for k = 1:numTrials % take average over 10 values, arbitrarily for now
         %Generate random message
         m = rand(1,4) < random;
-        %Generator Matrix G = [1 0 0 0 1 1 1 0;0 1 0 0 1 1 0 1; 0 0 1 0 1 0 1 1; 0 0 0 1 0 1 1 1];
-        G= [eye(4),rot90(~eye(4))];
+
         
         %Bit Error function from channel, p hardcoded to 0.2
         e = rand(1,8) < p;

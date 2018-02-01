@@ -1,5 +1,5 @@
-stepsize=0.05;
-lastp = 1;
+stepsize=0.02;
+lastp = 0.6;
 random = 0.5;
 
 numRows = int8((lastp)/stepsize);
