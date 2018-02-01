@@ -5,16 +5,16 @@ random = 0.5;
 numRows = int8((lastp)/stepsize);
 ResultMatrix = zeros(numRows , 2); %initialize empty
 
+%Generator Matrix G = [1 0 0 0 1 1 1 0;0 1 0 0 1 1 0 1; 0 0 1 0 1 0 1 1; 0 0 0 1 0 1 1 1];
+G= [eye(4),rot90(~eye(4))];
+% Parity Check Matrix H
+H= [rot90(~eye(4)),eye(4)];
+
 %init codebook
 codebook = zeros(16,8);
 for i = 0:(2^4-1)
    codebook(i+1,:) = mod(de2bi(i,4,'left-msb')*G,2);%generate codebook entry
 end
-
-%Generator Matrix G = [1 0 0 0 1 1 1 0;0 1 0 0 1 1 0 1; 0 0 1 0 1 0 1 1; 0 0 0 1 0 1 1 1];
-G= [eye(4),rot90(~eye(4))];
-% Parity Check Matrix H
-H= [rot90(~eye(4)),eye(4)];
 
 
 %Generate the syndrome table error side
