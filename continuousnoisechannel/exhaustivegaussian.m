@@ -46,19 +46,19 @@ for j = 0: numRows % for each p
             sr(1)= m(int8(i/2));
             i = i+2;
         end
-        
+
         %Corrupt part of the codeword using bit error channel
         y = c+e;
         dmin = 100000;
         result= 0;
-        for a= 1: length(codebook)
-            cee = codebook(7:18);
-            dval = (y-cee)' * (y-cee);
+        for a= 1: size(codebook,1)
+            cee = codebook(a,7:18);
+            dval = (y-cee) * (y-cee)';
             if dval<dmin
                dmin= dval;
                result= a;
             end
         end
-        mhat= codebook(result,1:4);  
+        mhat= codebook(result,1:4);    
     end
 end 
