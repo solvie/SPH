@@ -19,11 +19,11 @@ codebook = linearblockcodebook844();
 
 %Decode received message using the codebook
 decoded = decodemsglinblock844(codebook, y);
+disp('Decoded codeword mhat');
+disp(decoded);
 
-
-if decoded(1)==-1
-    disp('result not found')
+if m==decoded
+    disp('Message successfully decoded');
 else
-    disp('Decoded codeword mhat');
-    disp(decoded);
+    disp('Message not recovered');
 end
