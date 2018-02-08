@@ -17,7 +17,7 @@ for j = 0: numRows % for each p
     errorSum = 0;
     numTrials = 10000;
     index =10;
-    for k = 1:numTrials % take average over 10 values, arbitrarily for now
+    for k = 1:numTrials
         numDiffs = testencodedecodesyndrome844(p, H, E, Syn, true);
         errorSum = errorSum+numDiffs;
     end
