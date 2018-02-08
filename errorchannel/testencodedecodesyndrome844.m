@@ -17,7 +17,11 @@ function [ numDiffs ] = testencodedecodesyndrome844( p_error, H, syndrome_error,
        end
     end
     if index==10 % if not found, max error
-        numDiffs=4;
+        %numDiffs=4;
+        ehat = syndrome_error(1,:);
+        chat = mod(ehat+r,2);
+        mhat = chat(1:4);
+        numDiffs = sum(abs(mhat-m));
     else 
         ehat = syndrome_error(index,:);
         chat = mod(ehat+r,2);

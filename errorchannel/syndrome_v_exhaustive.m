@@ -17,7 +17,7 @@ for j = 0: numRows % for each p
     p = double(j)*stepsize;
     errorSumSyn = 0;
     errorSumEx = 0;
-    numTrials = 5000;
+    numTrials = 20000;
     index =10;
     for k = 1:numTrials
         [ numDiffEx,numDiffsSyn ] = testencodedecodeboth(p, H, E, Syn, codebook,true);
@@ -35,7 +35,7 @@ hold on
 plot(ResultMatrixEx(:,1),ResultMatrixEx(:,2));
 hold off
 
-title('Both.');
+title('BER error channel with syndrome and exhaustive decoding');
 legend('Syndrome','Exhaustive');
 xlabel('P_{error}');
 ylabel('Error Rate');

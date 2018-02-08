@@ -24,12 +24,14 @@ function [diffEx,diffSyn] = testencodedecodeboth( p_error, H, syndrome_error, sy
        end
     end
     if index==10 % if not found, max error
+        disp('maxerror!');
         diffSyn=4;
     else 
         ehat = syndrome_error(index,:);
         chat = mod(ehat+r,2);
         mhat = chat(1:4);
         diffSyn = sum(abs(mhat-m));
+        disp(diffSyn);
     end
 end
 
