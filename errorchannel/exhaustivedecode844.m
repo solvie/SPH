@@ -16,7 +16,7 @@ for j = 0: numRows % for each p
         numDiffs = testencodedecodeexhaustive844(p, codebook, true);
         errorSum = errorSum+numDiffs;
     end
-    errorAvg = (errorSum/numTrials)/length(m);
+    errorAvg = (errorSum/numTrials)/4.0;
     ResultMatrix(j+1,:) = [p,  errorAvg];
 end 
 
