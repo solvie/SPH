@@ -1,4 +1,4 @@
-function [ retval ] = testencodedecode844( p_error, codebook, print_msgs )
+function [ retval ] = testencodedecodeexhaustive844( p_error, codebook, print_msgs )
    %Generate random message
    m = rand(1,4) < 0.5;
    %Encode Codeword: m -> c
