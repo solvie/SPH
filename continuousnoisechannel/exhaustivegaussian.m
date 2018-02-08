@@ -1,6 +1,6 @@
-stepsize=0.02;
-lastsigma = 2;
-sigma= 0;
+stepsize=0.01;
+lastsigma = 1.5;
+sigma= 0.01;
 
 numRows = int8((lastp)/stepsize);
 ResultMatrix = zeros(numRows , 2); %initialize empty
@@ -17,11 +17,12 @@ for j = 0: numRows % for each p
         errorSum = errorSum+numDiffs;
     end
     errorAvg = (errorSum/numTrials)/4;
-    ResultMatrix(j+1,:) = [sigma,  errorAvg];
+    snr= 10*log(1/(2*(sigma^2)));
+    ResultMatrix(j+1,:) = [snr,  errorAvg];
 end
 
 
-plot(ResultMatrix(:,1),ResultMatrix(:,2));
+semilogx(ResultMatrix(:,1),ResultMatrix(:,2));
 title('BER For Gaussian Noise Convolutional Encode Exhaustive Decode ');
 xlabel('sigma');
 ylabel('Error Rate');
