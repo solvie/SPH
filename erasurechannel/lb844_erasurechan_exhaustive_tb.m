@@ -15,7 +15,7 @@ for j = 0: numsteps
     p = double(j)*stepsize;
     errorSum = 0.0;
     for k = 1:numTrials
-        retval = testencodedecode844(p, codebook, false);
+        retval = testencodedecodeexhaustive844(p, codebook, false);
         if retval==false
             errorSum= errorSum+1;
         end

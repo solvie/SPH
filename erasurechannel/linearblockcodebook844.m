@@ -4,7 +4,7 @@ function [ codebook ] = linearblockcodebook844()
     length = 2^4;
     codebook = zeros(length,4*2);
     for i = 0:(length-1)
-       codebook(i+1,:) = mod(de2bi(i,4,'left-msb')*G,2);%generate codebook entry while decoding
+       codebook(i+1,:) = mod(de2bi(i,4,'left-msb')*G,2);
     end
 end
 

@@ -1,5 +1,5 @@
 %(8,4,4) Linear Block code passed through erasure channel, decoded using
-% Guassian elimination method. Test bench 
+% Gaussian elimination method. Test bench 
 
 stepsize=0.02;
 lastp = 1.0;
@@ -9,7 +9,6 @@ ResultMatrix = zeros(numsteps , 2); %initialize empty
 
 %Generate codebook for exhaustive decoding
 codebook = linearblockcodebook844();
-
 
 for j = 0: numsteps
     p = double(j)*stepsize;
