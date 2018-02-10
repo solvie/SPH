@@ -9,6 +9,7 @@ ResultMatrix = zeros(numRows , 2); %initialize empty
 codebook = linearblockcodebook844();
 H = [rot90(~eye(4)),eye(4)];
 E= [zeros(1,8); eye(8,8)];
+
 %Generate the syndrome table
 Syn = syndrome_table_gen();
 
