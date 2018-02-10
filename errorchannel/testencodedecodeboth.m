@@ -15,23 +15,9 @@ function [diffEx,diffSyn] = testencodedecodeboth( p_error, H, syndrome_error, sy
     diffEx = sum(abs(mhat-m));
     
     %Decode with syndrome
-    index = 10;
-    Hrt =mod( H*r',2);
-    for i = 1: length(syndrome_table)
-       if max(abs(Hrt'-syndrome_table(i,:)))==0 
-          index = i;
-          break
-       end
-    end
-    if index==10 % if not found, max error
-        disp('maxerror!');
-        diffSyn=4;
-    else 
-        ehat = syndrome_error(index,:);
-        chat = mod(ehat+r,2);
-        mhat = chat(1:4);
-        diffSyn = sum(abs(mhat-m));
-        disp(diffSyn);
-    end
+    mhat = syndromedecodemsg844(H, r, syndrome_table, syndrome_error);
+    
+    %find number of different bits between mhat and m 
+    diffSyn = sum(abs(mhat-m));
 end
 
