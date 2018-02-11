@@ -1,11 +1,12 @@
-function [ retval ] = gaussiandecode844( message )
-    %message= [1, 1, 0, 1, 0,1,0,0];
+%function [ retval ] = gaussiandecode844( message )
+    message= [0.5, 0.5, 0.5, 1, 0.5,1,0,0];
 
     %case 1: 0 error- message returned
     if(sum(message(1:4) ==0.5)>0)
         % if errors exist
         while(sum(message(1:4) ==0.5)~=0)
             error_index=find(message==0.5);
+            
             eqn1= [message(1),message(2),message(3), message(5)];
             eqn1_index= [1,2,3,5];
             erasures_eqn1= find(eqn1==0.5);
@@ -23,7 +24,7 @@ function [ retval ] = gaussiandecode844( message )
             three_erasure_eqn= find(length_erasures == 3) ;
             two_erasure_eqn= find(length_erasures == 2) ;
 
-            if length(find(length_erasures >= 3))>=2 || length(find(length_erasures >= 2))>=3
+            if length(find(length_erasures >= 3))>=2 || length(find(length_erasures == 2))>=3
                 disp('More than 3 errors');
                 % randomly guess the message
                 while ~isempty(error_index)
@@ -57,10 +58,9 @@ function [ retval ] = gaussiandecode844( message )
                 message(eqn4_index(erasures_eqn4))= eqn4(erasures_eqn4);
                 continue;
             end
-            i=0;
+
             if length(three_erasure_eqn)==1
-                i=i+1;
-                switch three_erasure_eqn(i)
+                switch three_erasure_eqn(1)
                     case 1
                         %r3==r4
                         %r2==r4
@@ -110,8 +110,7 @@ function [ retval ] = gaussiandecode844( message )
                         break;
                 end
             end
-            
         end
     end
     retval=message(1:4);
-end
+%end
