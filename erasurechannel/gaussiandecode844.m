@@ -1,5 +1,5 @@
-%function [ retval ] = gaussiandecode844( message )
-    message= [0.5, 0.5, 0.5, 1, 0.5,1,0,0];
+function [ retval ] = gaussiandecode844( message )
+    %message= [0.5, 0.5, 0.5, 1, 0.5,1,0,0];
 
     %case 1: 0 error- message returned
     if(sum(message(1:4) ==0.5)>0)
@@ -113,4 +113,4 @@
         end
     end
     retval=message(1:4);
-%end
+end
