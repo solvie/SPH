@@ -1,14 +1,14 @@
-%function [ retval ] = testgaussiandecode( p_error,print_msgs )
+function [ retval ] = testgaussiandecode( p_error,print_msgs )
    %Generate random message
    m = rand(1,4) < 0.5;
    %Encode Codeword: m -> c
    c = linearblockencoder844(m);
    %Erase part of message with set probability using erasure channel: c -> y
-   y = erasurechannel(0.7,c);
+   y = erasurechannel(p_error,c);
    %Decode received message using the codebook
    decoded = gaussiandecode844(y);
-   false_flag= 1;
-   if false_flag
+   
+   if print_msgs
        disp('Random message generated m:');
        disp(m);
        disp('Encoded message c:');
@@ -23,4 +23,4 @@
    else
         retval = false;
    end
-%end
+end

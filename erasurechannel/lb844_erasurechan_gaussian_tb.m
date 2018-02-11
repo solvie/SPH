@@ -24,6 +24,6 @@ for j = 0: numsteps
 end
 
 plot(ResultMatrix(:,1),ResultMatrix(:,2));
-title('BER For Erasure Channel Exhaustive Decode ');
+title('BER For Erasure Channel Gaussian Decode ');
 xlabel('P_{error}');
 ylabel('Error Rate');
