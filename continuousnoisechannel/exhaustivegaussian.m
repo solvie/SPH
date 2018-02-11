@@ -2,7 +2,7 @@ stepsize=0.01;
 lastsigma = 1.5;
 sigma= 0.01;
 
-numRows = int8((lastp)/stepsize);
+numRows = int8((lastsigma)/stepsize);
 ResultMatrix = zeros(numRows , 2); %initialize empty
 
 codebook = gen_convtl_codebook();
