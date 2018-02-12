@@ -8,7 +8,7 @@ function [ numDiffs ] = testencodedecodeexhaustive( sigma, codebook, print_msgs 
     %Corrupt part of the codeword using bit error channel
     y = c+e;
     %decode using the exhaustive decoder
-    mhat = decode_exhaustive(y, codebook);
+    [mhat ~] = decode_exhaustive(y, codebook);
     numDiffs = sum(abs(mhat-m));
     if print_msgs
         disp('Random message generated m:');
