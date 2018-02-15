@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Thu Feb 15 15:26:53 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : conv_encoder_G23_G33
+Top-level Entity Name : test
+Family : Cyclone II
+Total logic elements : 440
+    Total combinational functions : 317
+    Dedicated logic registers : 308
+Total registers : 308
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 128
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,30 @@
+|conv_encoder_G23_G33
+c1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk => counter4:inst9.CLK
+clk => inst2.CLK
+clk => inst1.CLK
+clk => inst.CLK
+clk => inst3.CLK
+c2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+bitgen <= bitgen:inst10.bitstream
+
+
+|conv_encoder_G23_G33|bitgen:inst10
+SEL[0] => Decoder0.IN3
+SEL[1] => Decoder0.IN2
+SEL[2] => Decoder0.IN1
+SEL[3] => Decoder0.IN0
+bitstream <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|conv_encoder_G23_G33|counter4:inst9
+CLK => Y[0]~reg0.CLK
+CLK => Y[1]~reg0.CLK
+CLK => Y[2]~reg0.CLK
+CLK => Y[3]~reg0.CLK
+Y[0] <= Y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
