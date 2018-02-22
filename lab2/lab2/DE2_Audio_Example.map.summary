@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Feb 22 17:25:17 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE2_Audio_Example
+Top-level Entity Name : toplevel
+Family : Cyclone II
+Total logic elements : 1,837
+    Total combinational functions : 1,061
+    Dedicated logic registers : 1,361
+Total registers : 1361
+Total pins : 34
+Total virtual pins : 0
+Total memory bits : 21,504
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

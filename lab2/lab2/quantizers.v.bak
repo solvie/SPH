@@ -1,0 +1,6 @@
+module quantizer_1_bit (	CLK,	Y	);	
+module quantizer_2_bit (	CLK,	Y	);	
+module quantizer_3_bit (	CLK,	Y	);	
+module quantizer_4_bit (	CLK,	Y	);	
+module quantizer_8_bit (	CLK,	Y	);	
+
