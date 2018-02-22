@@ -16,6 +16,7 @@ yprime = conv(x,hprime);
 sound(x,16000); %normal
 sound(x,13000); %slow
 sound(x,20000); %sped
+sound(fliplr(x'), 16000)%backwards
 
 % sub-sampled 2:1
 x2 = downsample(x,2);
