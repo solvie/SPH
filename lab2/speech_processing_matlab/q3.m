@@ -69,3 +69,59 @@ xlabel('Frequency (Hz)');
 ylabel('Magnitude');
 
 
+% quantizer 1 bit
+x_hat=x;
+for i= 1:length(x)
+    for j= 1:2^1
+        if (x(i)>= 1-((j)*2/2^1))
+            x_hat(i)=1-((j-1)*2/2^1);
+            break;
+        end
+    end
+end
+
+% quantizer 2 bit
+x_hat=x;
+for i= 1:length(x)
+    for j= 1:2^2
+        if (x(i)>= 1-((j)*2/2^2))
+            x_hat(i)=1-((j-1)*2/2^2);
+            break;
+        end
+    end
+end
+
+% quantizer 4 bit
+x_hat=x;
+for i= 1:length(x)
+    for j= 1:2^4
+        if (x(i)>= 1-((j)*2/2^4))
+            x_hat(i)=1-((j-1)*2/2^4);
+            break;
+        end
+    end
+end
+
+% quantizer 8 bit 
+x_hat=x;
+for i= 1:length(x)
+    for j= 1:2^8
+        if (x(i)>= 1-((j)*2/2^8))
+            x_hat(i)=1-((j-1)*2/2^8);
+            break;
+        end
+    end
+end
+
+% quantizer 16 bit 
+x_hat=x;
+for i= 1:length(x)
+    for j= 1:2^16
+        if (x(i)>= 1-((j)*2/2^16))
+            x_hat(i)=1-((j-1)*2/2^16);
+            break;
+        end
+    end
+end
+
+
