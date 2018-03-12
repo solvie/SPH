@@ -122,7 +122,10 @@ function [ codeword ] = viterbi_decode_844( r )
 
     SimplifiedVector = [CodeBits(pathmatrix(i,1),pathmatrix(i,2),1), CodeBits(pathmatrix(i,2),pathmatrix(i,3),2), CodeBits(pathmatrix(i,3),pathmatrix(i,4),3), CodeBits(pathmatrix(i,4),pathmatrix(i,5),4)];
 
-    codeword = [de2bi(SimplifiedVector(1), 2),de2bi(SimplifiedVector(2), 2),de2bi(SimplifiedVector(3), 2),de2bi(SimplifiedVector(4), 2)];
+    codeword = [de2bi(SimplifiedVector(1), 2,'left-msb' ),de2bi(SimplifiedVector(2), 2,'left-msb'),de2bi(SimplifiedVector(3), 2,'left-msb'),de2bi(SimplifiedVector(4), 2,'left-msb')];
+    temp= codeword(4);
+    codeword(4)= codeword(5);
+    codeword(5)= temp;
     disp(codeword);
 end
 
