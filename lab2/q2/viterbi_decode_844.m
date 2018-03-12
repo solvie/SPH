@@ -11,7 +11,7 @@ function [ codeword ] = viterbi_decode_844( r )
     SurvivorEdges(1,3) = (r(1)-1)^2+(r(2))^2;
     SurvivorEdges(1,4) = (r(1))^2+(r(2)-1)^2;
     
-    %Finding survivors stage 2 (m3,p1)
+    %Finding survivors stage 2 (m3,pv1)
     SurvivorEdges(:,:,2) = inf(4,4);
     CodeBits(:,:,2) = inf(4,4);
     
@@ -26,7 +26,7 @@ function [ codeword ] = viterbi_decode_844( r )
        SurvivorEdges(1,1,2) = d00;
        SurvivorEdges(2,2,2) = d00;
        CodeBits(1,1,2)= 0;
-       CodeBits(1,1,2)= 0;
+       CodeBits(2,2,2)= 0;
     else
        SurvivorPres(1,1)=2;
        SurvivorPres(2,1)=1;
