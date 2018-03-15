@@ -643,5 +643,11 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=213" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=27910" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=14641" -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE counter.v
+set_global_assignment -name VERILOG_FILE gaussian_noise_adder.v
+set_global_assignment -name VERILOG_FILE subsampling.v
+set_global_assignment -name VERILOG_FILE uniform_random_num_gen.v
+set_global_assignment -name VERILOG_FILE uniformRV32.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE gaussian_noise.v
 set_global_assignment -name SLD_FILE "P:/SPH/lab2/lab2/stp1_auto_stripped.stp"

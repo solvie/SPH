@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_Audio_Example
-Thu Feb 22 17:25:17 2018
+Thu Mar 15 14:43:07 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -75,13 +75,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 22 17:25:17 2018            ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 15 14:43:07 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE2_Audio_Example                                ;
 ; Top-level Entity Name              ; toplevel                                         ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 1,837                                            ;
-;     Total combinational functions  ; 1,061                                            ;
+; Total logic elements               ; 1,838                                            ;
+;     Total combinational functions  ; 1,062                                            ;
 ;     Dedicated logic registers      ; 1,361                                            ;
 ; Total registers                    ; 1361                                             ;
 ; Total pins                         ; 34                                               ;
@@ -280,16 +280,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 1,837    ;
+; Estimated Total logic elements              ; 1,838    ;
 ;                                             ;          ;
-; Total combinational functions               ; 1061     ;
+; Total combinational functions               ; 1062     ;
 ; Logic element usage by number of LUT inputs ;          ;
 ;     -- 4 input functions                    ; 519      ;
 ;     -- 3 input functions                    ; 295      ;
-;     -- <=2 input functions                  ; 247      ;
+;     -- <=2 input functions                  ; 248      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 910      ;
+;     -- normal mode                          ; 911      ;
 ;     -- arithmetic mode                      ; 151      ;
 ;                                             ;          ;
 ; Total registers                             ; 1361     ;
@@ -304,7 +304,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;          ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 1020     ;
-; Total fan-out                               ; 10511    ;
+; Total fan-out                               ; 10513    ;
 ; Average fan-out                             ; 4.00     ;
 +---------------------------------------------+----------+
 
@@ -314,7 +314,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                            ; Library Name ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |toplevel                                                                                               ; 1061 (1)          ; 1361 (0)     ; 21504       ; 0            ; 0       ; 0         ; 34   ; 0            ; |toplevel                                                                                                                                                                                                                                                                                                                                      ; work         ;
+; |toplevel                                                                                               ; 1062 (1)          ; 1361 (0)     ; 21504       ; 0            ; 0       ; 0         ; 34   ; 0            ; |toplevel                                                                                                                                                                                                                                                                                                                                      ; work         ;
 ;    |Audio_Controller:inst|                                                                              ; 322 (4)           ; 222 (4)      ; 13312       ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|Audio_Controller:inst                                                                                                                                                                                                                                                                                                                ; work         ;
 ;       |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|                                           ; 155 (41)          ; 108 (36)     ; 5120        ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|Audio_Controller:inst|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                                                                                                                                          ; work         ;
 ;          |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|                                            ; 10 (10)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|Audio_Controller:inst|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                                                                                                                                        ; work         ;
@@ -359,8 +359,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |LEDdriver:inst2|                                                                                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|LEDdriver:inst2                                                                                                                                                                                                                                                                                                                      ; work         ;
 ;    |avconf:inst1|                                                                                       ; 188 (139)         ; 73 (44)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|avconf:inst1                                                                                                                                                                                                                                                                                                                         ; work         ;
 ;       |I2C_Controller:u0|                                                                               ; 49 (49)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|avconf:inst1|I2C_Controller:u0                                                                                                                                                                                                                                                                                                       ; work         ;
-;    |sld_hub:auto_hub|                                                                                   ; 120 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 119 (81)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
+;    |sld_hub:auto_hub|                                                                                   ; 121 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 120 (82)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                                                      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ; work         ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                     ; 409 (1)           ; 980 (128)    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ; work         ;
@@ -611,12 +611,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|Audio_Controller:inst|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[4] ;
 ; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |toplevel|Audio_Controller:inst|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[22]                                             ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|avconf:inst1|I2C_Controller:u0|SD_COUNTER[1]                                                                                                 ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                                                           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                              ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                        ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                    ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                             ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |toplevel|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1415,14 +1409,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:01     ;
-; sld_hub:auto_hub ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1568,7 +1561,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Feb 22 17:24:55 2018
+    Info: Processing started: Thu Mar 15 14:42:48 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AudioLab -c DE2_Audio_Example
 Info (12021): Found 1 design units, including 1 entities, in source file modules/mult_32.v
     Info (12023): Found entity 1: mult_32
@@ -1618,6 +1611,24 @@ Info (12021): Found 6 design units, including 6 entities, in source file quantiz
     Info (12023): Found entity 4: quantizer_3
     Info (12023): Found entity 5: quantizer_2
     Info (12023): Found entity 6: quantizer_1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: counter
+Info (12021): Found 6 design units, including 6 entities, in source file gaussian_noise_adder.v
+    Info (12023): Found entity 1: gaussian_noise_40db
+    Info (12023): Found entity 2: gaussian_noise_30db
+    Info (12023): Found entity 3: gaussian_noise_20db
+    Info (12023): Found entity 4: gaussian_noise_10db
+    Info (12023): Found entity 5: gaussian_noise_0db
+    Info (12023): Found entity 6: gaussian_noise_m10db
+Info (12021): Found 4 design units, including 4 entities, in source file subsampling.v
+    Info (12023): Found entity 1: subsampling_2_1
+    Info (12023): Found entity 2: subsampling_4_1
+    Info (12023): Found entity 3: subsampling_8_1
+    Info (12023): Found entity 4: subsampling_16_1
+Info (12021): Found 1 design units, including 1 entities, in source file uniform_random_num_gen.v
+    Info (12023): Found entity 1: uniform_random_num_gen
+Info (12021): Found 1 design units, including 1 entities, in source file uniformrv32.v
+    Info (12023): Found entity 1: uniformRV32
 Warning (10236): Verilog HDL Implicit Net warning at mux1_32.v(15): created implicit net for "mux_out"
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Warning (275089): Not all bits in bus "SW[17..0]" are used
@@ -1850,10 +1861,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at VCC
     Warning (13410): Pin "LEDR[0]" is stuck at GND
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
 Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 129 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -1864,17 +1871,17 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[1]"
     Warning (15610): No output dependent on input pin "SW[0]"
-Info (21057): Implemented 2078 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2079 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 22 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 1870 logic cells
+    Info (21061): Implemented 1871 logic cells
     Info (21064): Implemented 168 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 99 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 97 warnings
     Info: Peak virtual memory: 597 megabytes
-    Info: Processing ended: Thu Feb 22 17:25:17 2018
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Thu Mar 15 14:43:07 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:08
 
 
