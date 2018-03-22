@@ -14,8 +14,8 @@ uniformRV32 uniformRV32_6( .SEED (seed+47) , .RST (reset), .CLK (clk), .Y (noise
 
 always@(*)	 begin
 
-	 noise <= (noise1^noise2^noise3^noise4^noise5^noise6);
-	 Y_hat<= {{10'h00000000}, {noise[31:10]}}^Y; //possibly neeed to mod
+	 noise <= (noise1+noise2+noise3+noise4+noise5+noise6);
+	 Y_hat<= {{10'h00000000}, {noise[31:10]}}+Y; //possibly neeed to mod
 end
 endmodule
 
@@ -34,8 +34,8 @@ uniformRV32 uniformRV32_5( .SEED (seed+50) , .RST (reset), .CLK (clk), .Y (noise
 uniformRV32 uniformRV32_6( .SEED (seed+47) , .RST (reset), .CLK (clk), .Y (noise6));
 
 always@(*)	 begin
-	 noise <= (noise1^noise2^noise3^noise4^noise5^noise6);
-	 Y_hat<= {{8'b00000000}, {noise[31:8]}}^Y; //possibly neeed to mod
+	 noise <= (noise1+noise2+noise3+noise4+noise5+noise6);
+	 Y_hat<= {{8'b00000000}, {noise[31:8]}}+Y; //possibly neeed to mod
 end
 endmodule
 
@@ -54,8 +54,8 @@ uniformRV32 uniformRV32_5( .SEED (seed+50) , .RST (reset), .CLK (clk), .Y (noise
 uniformRV32 uniformRV32_6( .SEED (seed+47) , .RST (reset), .CLK (clk), .Y (noise6));
 
 always@(*)	 begin
-	 noise <= (noise1^noise2^noise3^noise4^noise5^noise6);
-	 Y_hat<= {{6'h00000000}, {noise[31:6]}}^Y; //possibly neeed to mod
+	 noise <= (noise1+noise2+noise3+noise4+noise5+noise6);
+	 Y_hat<= {{6'h00000000}, {noise[31:6]}}+Y; //possibly neeed to mod
 end
 endmodule
 
@@ -73,8 +73,8 @@ uniformRV32 uniformRV32_4( .SEED (seed+12) , .RST (reset), .CLK (clk), .Y (noise
 uniformRV32 uniformRV32_5( .SEED (seed+50) , .RST (reset), .CLK (clk), .Y (noise5));
 uniformRV32 uniformRV32_6( .SEED (seed+47) , .RST (reset), .CLK (clk), .Y (noise6));
 always@(*)	 begin
-	 noise <= (noise1^noise2^noise3^noise4^noise5^noise6);
-	 Y_hat<= {{4'h00000000}, {noise[31:4]}}^Y; //possibly neeed to mod
+	 noise <= (noise1+noise2+noise3+noise4+noise5+noise6);
+	 Y_hat<= {{4'h00000000}, {noise[31:4]}}+Y; //possibly neeed to mod
 end
 endmodule
 
@@ -92,8 +92,8 @@ uniformRV32 uniformRV32_4( .SEED (seed+12) , .RST (reset), .CLK (clk), .Y (noise
 uniformRV32 uniformRV32_5( .SEED (seed+50) , .RST (reset), .CLK (clk), .Y (noise5));
 uniformRV32 uniformRV32_6( .SEED (seed+47) , .RST (reset), .CLK (clk), .Y (noise6));
 always@(*)	 begin
-	 noise <= (noise1^noise2^noise3^noise4^noise5^noise6);
-	 Y_hat<= {{2'h00000000}, {noise[31:2]}}^Y; //possibly neeed to mod
+	 noise <= (noise1+noise2+noise3+noise4+noise5+noise6);
+	 Y_hat<= {{2'h00000000}, {noise[31:2]}}+Y; //possibly neeed to mod
 end
 endmodule
 
@@ -112,8 +112,8 @@ uniformRV32 uniformRV32_5( .SEED (seed+50) , .RST (reset), .CLK (clk), .Y (noise
 uniformRV32 uniformRV32_6( .SEED (seed+47) , .RST (reset), .CLK (clk), .Y (noise6));
 
 always@(*)	 begin
-	 noise <= (noise1^noise2^noise3^noise4^noise5^noise6);
-	 Y_hat<= noise^Y; //possibly neeed to mod
+	 noise <= (noise1+noise2+noise3+noise4+noise5+noise6);
+	 Y_hat<= noise+Y; //possibly neeed to mod
 end
 endmodule
 

@@ -10,12 +10,11 @@
 /     Y - A uniformly distributed RV with 32bits        /
 ********************************************************/
 
-module uniformRV32 ( RST, CLK, Y );
+module uniformRV32 ( SEED, RST, CLK, Y );
   
   input   CLK;
   input   RST;
-  
-  parameter SEED = 32'h0F0F0F0F;
+  input reg [31:0]  SEED;
 
   output reg [31:0]  Y;
   
