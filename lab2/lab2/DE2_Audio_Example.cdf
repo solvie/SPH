@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("P:/SPH/lab2/lab2/") File("DE2_Audio_Example.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("P:/ecse436/SPH/SPH/lab2/lab2/") File("DE2_Audio_Example.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
