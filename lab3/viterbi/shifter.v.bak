@@ -1,6 +1,6 @@
 module shifter (Y, select, out);
-input		[31:0]	Y;	
-input		[2:0]	select;	
+input	reg	[31:0]	Y;	
+input	reg	[2:0]	select;	
 output reg [31:0]  	out;
 
 always@(*)	 begin
