@@ -6,7 +6,7 @@ output reg [7:0] out;
 integer [4:0] weight_order_1, weight_order_4;
 integer [7:0] weight_order_2, weight_order_3;
 
-integer [4:0] final_edges;
+integer [4:0] final_edges, final;
 
 reg signed [7:0] min_sum_1,min_sum_2, min_sum_3, min_sum_4;
 
