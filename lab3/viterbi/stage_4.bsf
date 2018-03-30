@@ -47,9 +47,9 @@ applicable agreement for further details.
 	(port
 		(pt 160 48)
 		(output)
-		(text "4_2_17..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
-		(text "4_2_17..0]" (rect 79 43 139 57)(font "Arial" (font_size 8)))
-		(line (pt 160 48)(pt 144 48))
+		(text "4_2_1[7..0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "4_2_1[7..0]" (rect 76 43 139 57)(font "Arial" (font_size 8)))
+		(line (pt 160 48)(pt 144 48)(line_width 3))
 	)
 	(port
 		(pt 160 64)

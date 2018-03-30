@@ -21,7 +21,7 @@ module uniformRV32 ( RST, CLK, Y );
   
   reg  [31:0] next;
   
-  always@* begin
+  always@(posedge RST) begin
     next[31] = Y[30];
     next[30] = Y[29];
     next[29] = Y[28];

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Mar 22 19:54:57 2018
+Analysis & Synthesis Status : Successful - Thu Mar 29 20:53:15 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : viterbi_hamming
-Top-level Entity Name : stage_3
+Top-level Entity Name : top_level
 Family : Cyclone II
-Total logic elements : 34
-    Total combinational functions : 34
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 80
+Total logic elements : 1,966
+    Total combinational functions : 1,483
+    Dedicated logic registers : 885
+Total registers : 885
+Total pins : 18
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 2,176
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

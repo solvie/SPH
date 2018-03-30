@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 168 112)
+	(rect 16 16 160 112)
 	(text "noiseadder" (rect 5 0 68 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 80 25 92)(font "Arial" ))
 	(port
@@ -38,13 +38,13 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 152 32)
+		(pt 144 32)
 		(output)
-		(text "noise[31..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
-		(text "noise[31..0]" (rect 65 27 131 41)(font "Arial" (font_size 8)))
-		(line (pt 152 32)(pt 136 32)(line_width 3))
+		(text "noise[7..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "noise[7..0]" (rect 64 27 123 41)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 136 80))
+		(rectangle (rect 16 16 128 80))
 	)
 )
