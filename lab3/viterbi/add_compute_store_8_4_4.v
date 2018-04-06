@@ -1,16 +1,15 @@
-module add_compute_store_8_4_4(in_1_1_1, in_1_1_2, in_1_1_3, in_1_1_4, in_2_1_1, in_2_1_2, in_2_2_1, in_2_2_2, in_2_3_3, in_2_3_4, in_2_4_3, in_2_4_4, in_3_1_1, in_3_1_2, in_3_2_1, in_3_2_2, in_3_3_3, in_3_3_4, in_3_4_3, in_3_4_4, in_4_1_1, in_4_2_1, in_4_3_1, in_4_4_1, out);
+module add_compute_store_8_4_4(in_1_1_1, in_1_1_2, in_1_1_3, in_1_1_4, in_2_1_1, in_2_1_2, in_2_2_1, in_2_2_2, in_2_3_3, in_2_3_4, in_2_4_3, in_2_4_4, in_3_1_1, in_3_1_2, in_3_2_1, in_3_2_2, in_3_3_3, in_3_3_4, in_3_4_3, in_3_4_4, in_4_1_1, in_4_2_1, in_4_3_1, in_4_4_1, out, survivor_1_1, survivor_1_2, survivor_1_3, survivor_1_4, survivor_2_1, survivor_2_2, survivor_2_3, survivor_2_4, );
 
 input [7:0] in_1_1_1, in_1_1_2, in_1_1_3, in_1_1_4, in_2_1_1, in_2_1_2, in_2_2_1, in_2_2_2, in_2_3_3, in_2_3_4, in_2_4_3, in_2_4_4, in_3_1_1, in_3_1_2, in_3_2_1, in_3_2_2, in_3_3_3, in_3_3_4, in_3_4_3, in_3_4_4, in_4_1_1, in_4_2_1, in_4_3_1, in_4_4_1;
 
 output reg [7:0] out;
+output reg signed [7:0] survivor_1_1, survivor_1_2, survivor_1_3, survivor_1_4;
+output reg signed [7:0] survivor_2_1, survivor_2_2, survivor_2_3, survivor_2_4;
+output reg signed [7:0] survivor_1, survivor_2, survivor_3, survivor_4, survivor_f_1, survivor_f_2, survivor_f;
 
 integer path_1_edges[3:0], path_2_edges[3:0], path_3_edges[3:0], path_4_edges[1:0], path_4_edge, final_edges[3:0];
 
 integer i;
-
-reg signed [7:0] survivor_1_1, survivor_1_2, survivor_1_3, survivor_1_4;
-reg signed [7:0] survivor_2_1, survivor_2_2, survivor_2_3, survivor_2_4;
-reg signed [7:0] survivor_1, survivor_2, survivor_3, survivor_4, survivor_f_1, survivor_f_2, survivor_f;
 
 wire comp_r_1_1, comp_r_1_2, comp_r_1_3, comp_r_1_4, comp_r_2_1, comp_r_2_2, comp_r_2_3, comp_r_2_4, comp_r_3_1, comp_r_3_2, comp_r_f;
 
