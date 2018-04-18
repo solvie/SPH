@@ -1,5 +1,4 @@
-function [center, radius, error] = find_best_iris(eye_edges, image)
-        %imshow(eye_edges)
+function [center, radius, error] = find_best_pupil(eye_edges, image)
         error =0;
         % get a reasonable range of sizes for the given image size
         
@@ -14,10 +13,7 @@ function [center, radius, error] = find_best_iris(eye_edges, image)
 
         % For each R, G, and B
         for i= 1:3
-            relativecenters=[];
-            relradii=[];
             [relativecenters, relradii] = imfindcircles(eye_edges(:,:,i), [lower_rad upper_rad], 'Sensitivity', 0.95);
-           % viscircles(relativecenters, relradii,'EdgeColor','b');
             candidate_radii = [candidate_radii; relradii];
             candidate_centers = [candidate_centers; relativecenters];
         end
@@ -28,8 +24,6 @@ function [center, radius, error] = find_best_iris(eye_edges, image)
         
         for i = 1: length(candidate_radii)
            redness = detect_redness_level(candidate_centers(i,:), candidate_radii(i), image);
-           %disp('redness');
-           %disp(redness);
            if (redness>=0.5 && redness>current_highest)
                current_highest = redness;
                current_highest_index=i;
@@ -44,9 +38,6 @@ function [center, radius, error] = find_best_iris(eye_edges, image)
             disp('trying again');
             for i = 1: length(candidate_radii)
                redness = detect_redness_level(candidate_centers(i,:), candidate_radii(i)/2, image);
-               disp(redness);
-               %disp('redness');
-               %disp(redness);
                if (redness>=0.5 && redness>current_highest)
                    current_highest = redness;
                    current_highest_index=i;
@@ -64,4 +55,3 @@ function [center, radius, error] = find_best_iris(eye_edges, image)
             end
         end
 end
-

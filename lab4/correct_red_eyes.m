@@ -12,11 +12,9 @@ function [face_corrected] = correct_red_eyes(face, eyesbound)
         
         % put through hp filter
         eye_edges = highpass_color(quantized_eye);
-        
-        %imshow(eye_edges);
-        
+                
         % find circles to detect iris 
-        [relativecenter, radius, error] = find_best_iris(eye_edges, eye);
+        [relativecenter, radius, error] = find_best_pupil(eye_edges, eye);
         
         if (error==0)
             % put the center back relative to the larger image.
@@ -24,7 +22,7 @@ function [face_corrected] = correct_red_eyes(face, eyesbound)
             center(1) = relativecenter(1)+eyesbound(i,1);
             center(2) = relativecenter(2)+eyesbound(i,2);
 
-            % Assuming one circle was detected, make a mask from it
+            % Make a mask from the circle
             [facemask, blue, green] = mask_from_circle(center, radius, face);
 
             % Desaturate that area using the mask.
@@ -33,8 +31,6 @@ function [face_corrected] = correct_red_eyes(face, eyesbound)
             face_corrected(:,:,2) = cast(face_corrected(:,:,2), 'double').*green;
 
         end
-   end
-    
-
+    end
 end
 

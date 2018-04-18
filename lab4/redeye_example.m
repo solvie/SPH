@@ -1,19 +1,16 @@
 
 %Import image
-%pic = imread('brownred.jpg');
+pic = imread('redeyebefore.jpg');
 
 %Detect faces
-%facedetect = vision.CascadeObjectDetector;
-%face_bound = step(facedetect, pic);
+facedetect = vision.CascadeObjectDetector;
+face_bound = step(facedetect, pic);
 
-%face = output_bounded(pic, face_bound);
+face = output_bounded(pic, face_bound);
 
-face = imread('longer.png');
-
-eyedetect = vision.CascadeObjectDetector('RightEyeCART');
+eyedetect = vision.CascadeObjectDetector('LeftEyeCART');
 eyes_bound = step(eyedetect, face);
 
-eyes_bound = eyes_bound(2:3,:);
-
-face_c= correct_red_eyes(face,eyes_bound );
-imshowpair(face, face_c, 'montage');
+for i = 1:size(eyes_bound,1)
+    rectangle('Position',eyes_bound(i,:),'LineWidth',4,'LineStyle','-','EdgeColor','r');
+end
